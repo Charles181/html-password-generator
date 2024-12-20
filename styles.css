@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vb;
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.container{
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    box-shadow: -8px 8px 10px rgb(0, 0, 0, 0.3);
+}
+
+.container h1{
+    font-weight: bold;
+    margin-bottom: 36px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.inputBox{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.inputBox span{
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: #333;
+    cursor: pointer;
+}
+
+.passBox{
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-weight: 700;
+    font-size: 16px;
+    outline: none;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.row p, .row label{
+    flex-basis: 60%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.row p{
+    font-weight: 700;
+}
+
+.row input[type="checkbox"]{
+    margin-right: 8px;
+}
+
+.getBtn{
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffffff;
+    background-color: #3162cb;
+    cursor:pointer;
+    margin-top: 30px;
+}
+
+.getBtn:hover{
+    background-color: #1d1e20;
+}
+
+input[type="range"]{
+    width: 100%;
+    margin-top: 10px;
+}
+
+#sliderValue{
+    margin-right: 8px;
+}
+
+.passIndicator{
+    width: 100%;
+    height: 4px;
+    background-color: #dfdfdf;
+    position: relative;
+    border-radius: 25px;
+}
+
+.passIndicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.passIndicator.weak::before{
+    width: 20%;
+    background-color: red;
+}
+
+.passIndicator.medium::before{
+    width: 50%;
+    background-color: yellow;
+}
+
+.passIndicator.strong::before{
+    width: 100%;
+    background-color: #39FF14;
+}
